@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OP Billing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f3;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Outpatient Billing Form</h2>
+    <form>
+      <label>Billing Date:</label>
+      <input type="date" required>
+
+      <label>Patient ID:</label>
+      <input type="text" required>
+
+      <label>Patient Name:</label>
+      <input type="text" required>
+
+      <label>Consulting Doctor:</label>
+      <input type="text" required>
+
+      <label>Department:</label>
+      <input type="text" required>
+
+      <label>Visit Type:</label>
+      <select required>
+        <option>First Visit</option>
+        <option>Follow-up</option>
+      </select>
+
+      <label>Consultation Fee:</label>
+      <input type="number" step="0.01" required>
+
+      <label>Lab Charges:</label>
+      <input type="number" step="0.01">
+
+      <label>Scan/Imaging Charges:</label>
+      <input type="number" step="0.01">
+
+      <label>Other Services (e.g., Procedures):</label>
+      <textarea></textarea>
+
+      <label>Other Charges:</label>
+      <input type="number" step="0.01">
+
+      <label>Total Amount:</label>
+      <input type="number" step="0.01" required>
+
+      <label>Payment Mode:</label>
+      <select required>
+        <option>Cash</option>
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>UPI</option>
+        <option>Insurance</option>
+      </select>
+
+      <label>Billing Remarks:</label>
+      <textarea></textarea>
+
+      <button type="submit">Generate Bill</button>
+    </form>
+    <a class="back-link" href="index.html">&larr; Back to Dashboard</a>
+  </div>
+</body>
+</html>
